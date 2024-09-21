@@ -1,0 +1,7 @@
+project_id = "winder-rl"
+region     = "us-central1"
+zone = "us-central1-a"
+cluster_name = "helix-cluster"
+gpu_type = "nvidia-l4"
+gpu_driver_version = "LATEST"
+machine_type = "g2-standard-4"
