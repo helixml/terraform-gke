@@ -71,12 +71,12 @@ For example:
 ```bash
 export LATEST_RELEASE=$(curl -s https://get.helix.ml/latest.txt)
 helm upgrade --install my-helix-runner helix/helix-runner \
-  --set runner.host="my-helix-controlplane" \
+  --set runner.host="http://my-helix-controlplane" \
   --set runner.token="oh-hallo-insecure-token" \
   --set runner.memory=24GB \
   --set replicaCount=1 \
-  --set runner.axolotl="false" # Set to true if you have an Ampere class GPU \
-  --set image.tag="${LATEST_RELEASE}"
+  --set runner.axolotl="false" \
+  --set image.tag="${LATEST_RELEASE}-small"
 ```
 
 ## Access Helix
